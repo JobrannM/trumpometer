@@ -12,5 +12,19 @@
 
   <body>
     <%= yield %>
+
+     <script src='https://code.jquery.com/jquery-1.11.1.min.js'></script>
+     <script>
+      $(document).scroll(function() {
+        var st = $(this).scrollTop();
+        $("#banner").css({
+          "background-position-y": (-st/20)
+        })
+        $("#bannerscroll").css({
+          "top": (-st/5),
+          "bottom": (st/5)
+        })
+      });
+    </script>
   </body>
 </html>

@@ -13,3 +13,11 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+// Global Parameter for functional Parallax
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #444444;
+}
