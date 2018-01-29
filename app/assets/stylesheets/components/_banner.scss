@@ -1,0 +1,29 @@
+.banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: $my-font;
+  background-color: rgba(0,0,0,0.9);
+  letter-spacing: 10px;
+}
+
+.tagline {
+  text-align:center;
+}
+
+#trump {
+  color: red;
+  font-size: 40px;
+}
+
+#media {
+  color: white;
+  font-size: 40px;
+}
+
+#love {
+  color: blue;
+  font-size: 60px;
+}

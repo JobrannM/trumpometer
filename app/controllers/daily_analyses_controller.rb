@@ -1,11 +1,12 @@
 class DailyAnalysesController < ApplicationController
   before_action :set_analysis
-  def show
-  end
+
+  # def show
+  # end
 
   private
 
   def set_analysis
-    @analysis = Daily_analyses.last
+    @analysis = DailyAnalysis.last
   end
 end
