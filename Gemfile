@@ -11,6 +11,11 @@ gem 'font-awesome-sass'
 gem 'faker'
 gem 'figaro'
 
+gem 'capybara', '~> 2.13'
+gem 'poltergeist'
+gem 'phantomjs', require: 'phantomjs/poltergeist'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -44,7 +49,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 end
 
