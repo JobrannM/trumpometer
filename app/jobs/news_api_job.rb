@@ -32,7 +32,7 @@ class NewsApiJob < ApplicationJob
     c = 0 # total cnn articles
     n = 0 #total nbc articles
     articles.each do |article|
-      if article["title"].include?("Trump")
+      if article["title"].include?("Trump") && article["url"].include?("video") == false
         i += 1
         if article["source"]["name"] == "Fox News"
           f +=1
