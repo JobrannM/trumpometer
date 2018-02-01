@@ -313,7 +313,7 @@ nbc_article2 = Article.create!(
     "fear": 0.125948,
     "disgust": 0.52079,
     "anger": 0.193706
-  }
+  },
   trump_sentiment: [ -0.422047, "negative"],
   article_sentiment: [ -0.422047, "negative"]
   )
@@ -346,7 +346,7 @@ nbc_article3 = Article.create!(
     "fear": 0.109856,
     "disgust": 0.166249,
     "anger": 0.123337
-  }
+  },
   trump_sentiment: [ -0.615943, "negative"],
   article_sentiment: [ -0.615943, "negative"]
   )
