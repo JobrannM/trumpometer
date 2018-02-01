@@ -10,7 +10,7 @@ gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'
 gem 'faker'
 gem 'figaro'
-
+gem 'jquery-rails'
 gem 'capybara', '~> 2.13'
 gem 'poltergeist'
 gem 'phantomjs', require: 'phantomjs/poltergeist'

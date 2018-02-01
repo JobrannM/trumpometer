@@ -1,0 +1,5 @@
+<% @cnn_articles.each do |article| %>
+  <h6><%= "#{article.title}" %></h6>
+  <p><%= "#{article.author}" %></p>
+  <span><%= "#{article.article_sentiment[0]}"%></span>
+<% end %>
