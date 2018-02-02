@@ -1,5 +1,6 @@
 class DailyAnalysis < ApplicationRecord
   has_many :articles
+  has_many :media, through: :articles
   serialize :fox_article_global_emotions
   serialize :cnn_article_global_emotions
   serialize :nbc_article_global_emotions

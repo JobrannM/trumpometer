@@ -1,0 +1,85 @@
+.card {
+  height: 250px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  color: white;
+  position: relative;
+  margin-top: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: scale(1.03, 1.03);
+}
+
+.border-red {
+  border: 5px solid red;
+}
+
+.border-green {
+  border: 5px solid green;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.8em;
+}
+.card-title {
+  padding: 10px 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85%;
+}
+
+.card-title h4 {
+  margin: 0;
+}
+
+.card-title p {
+  padding-top: 5px;
+}
+
+.card-description {
+  padding: 10px 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+  width: 100%;
+  min-height: 33%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card-score {
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center;
+}
+
+.positive {
+  background: green;
+}
+
+.negative {
+  background: red;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+}
