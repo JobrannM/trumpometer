@@ -1,5 +1,5 @@
 
-require 'pry'
+
 require 'capybara/poltergeist'
 
 def init_capybara
