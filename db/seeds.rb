@@ -43,9 +43,9 @@ p "Done!"
 p "Creating Daily Analysis!"
 
 daily_analysis = DailyAnalysis.create!(
-  fox_global_sentiment: [ -0.342451, "negative"],
+  fox_article_global_sentiment: [ -0.342451, "negative"],
   cnn_global_sentiment: [ -0.431977, "negative"],
-  nbc_global_sentiment: [ -0,509968, "negative"],
+  nbc_global_sentiment: [ -0.509968, "negative"],
   fox_global_emotions: {
     "sadness": 0.231073,
     "joy": 0.547689,
