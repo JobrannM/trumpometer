@@ -15,8 +15,8 @@ Article.destroy_all
 p "Destroying Daily Analyses..."
 DailyAnalysis.destroy_all
 
- p "Destroying Medias"
- Medium.destroy_all
+p "Destroying Medias"
+Medium.destroy_all
 
  p "Creating Media..."
 
