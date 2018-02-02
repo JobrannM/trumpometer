@@ -15,28 +15,28 @@ Article.destroy_all
 p "Destroying Daily Analyses..."
 DailyAnalysis.destroy_all
 
-# p "Destroying Medias"
-# Medium.destroy_all
+ p "Destroying Medias"
+ Medium.destroy_all
 
-# p "Creating Media..."
+ p "Creating Media..."
 
-# media_fox = Medium.create!(
-#   name:"Fox News",
-#   logo:"http://p14.zdassets.com/hc/settings_assets/63348/200430188/Nsmx0VrtWicyK9MvKEUphQ-1024.png",
-#   url:"http://www.foxnews.com/"
-# )
+ media_fox = Medium.create!(
+   name:"Fox News",
+   logo:"http://p14.zdassets.com/hc/settings_assets/63348/200430188/Nsmx0VrtWicyK9MvKEUphQ-1024.png",
+   url:"http://www.foxnews.com/"
+ )
 
-# media_cnn = Medium.create!(
-#   name:"CNN",
-#   logo:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/1280px-CNN.svg.png",
-#   url:"https://edition.cnn.com/"
-# )
+ media_cnn = Medium.create!(
+   name:"CNN",
+   logo:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/1280px-CNN.svg.png",
+   url:"https://edition.cnn.com/"
+ )
 
-# media_nbc = Medium.create!(
-#   name:"NBC News",
-#   logo:"https://upload.wikimedia.org/wikipedia/commons/9/9f/NBC_News_2013_logo.png",
-#   url:"https://www.nbcnews.com/"
-# )
+ media_nbc = Medium.create!(
+   name:"NBC News",
+   logo:"https://upload.wikimedia.org/wikipedia/commons/9/9f/NBC_News_2013_logo.png",
+   url:"https://www.nbcnews.com/"
+ )
 
 p "Done!"
 
