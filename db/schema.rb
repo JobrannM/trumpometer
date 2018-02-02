@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180131155932) do
+ActiveRecord::Schema.define(version: 20180202110213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,12 +46,18 @@ ActiveRecord::Schema.define(version: 20180131155932) do
     t.integer "rt_global_sentiment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "fox_global_emotions"
-    t.text "cnn_global_emotions"
-    t.text "nbc_global_emotions"
-    t.string "fox_global_sentiment", default: [], array: true
-    t.string "cnn_global_sentiment", default: [], array: true
-    t.string "nbc_global_sentiment", default: [], array: true
+    t.text "fox_article_global_emotions"
+    t.text "cnn_article_global_emotions"
+    t.text "nbc_article_global_emotions"
+    t.string "fox_article_global_sentiment", default: [], array: true
+    t.string "cnn_article_global_sentiment", default: [], array: true
+    t.string "nbc_article_global_sentiment", default: [], array: true
+    t.text "fox_trump_global_emotions"
+    t.text "cnn_trump_global_emotions"
+    t.text "nbc_trump_global_emotions"
+    t.string "fox_trump_global_sentiment", default: [], array: true
+    t.string "cnn_trump_global_sentiment", default: [], array: true
+    t.string "nbc_trump_global_sentiment", default: [], array: true
   end
 
   create_table "media", force: :cascade do |t|

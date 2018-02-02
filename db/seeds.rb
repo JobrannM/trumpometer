@@ -18,35 +18,80 @@ DailyAnalysis.destroy_all
 p "Destroying Medias"
 Medium.destroy_all
 
-p "Creating Media..."
+ p "Creating Media..."
 
-media_fox = Medium.create!(
-  name:"Fox News",
-  logo:"http://p14.zdassets.com/hc/settings_assets/63348/200430188/Nsmx0VrtWicyK9MvKEUphQ-1024.png",
-  url:"http://www.foxnews.com/"
-)
+ media_fox = Medium.create!(
+   name:"Fox News",
+   logo:"http://p14.zdassets.com/hc/settings_assets/63348/200430188/Nsmx0VrtWicyK9MvKEUphQ-1024.png",
+   url:"http://www.foxnews.com/"
+ )
 
-media_cnn = Medium.create!(
-  name:"CNN",
-  logo:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/1280px-CNN.svg.png",
-  url:"https://edition.cnn.com/"
-)
+ media_cnn = Medium.create!(
+   name:"CNN",
+   logo:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/1280px-CNN.svg.png",
+   url:"https://edition.cnn.com/"
+ )
 
-media_nbc = Medium.create!(
-  name:"NBC News",
-  logo:"https://upload.wikimedia.org/wikipedia/commons/9/9f/NBC_News_2013_logo.png",
-  url:"https://www.nbcnews.com/"
-)
+ media_nbc = Medium.create!(
+   name:"NBC News",
+   logo:"https://upload.wikimedia.org/wikipedia/commons/9/9f/NBC_News_2013_logo.png",
+   url:"https://www.nbcnews.com/"
+ )
 
 p "Done!"
 
 p "Creating Daily Analysis!"
 
 daily_analysis = DailyAnalysis.create!(
-  fox_global_sentiment: [ -0.342451, "negative"],
-  cnn_global_sentiment: [ -0.431977, "negative"],
-  nbc_global_sentiment: [ -0,509968, "negative"]
-  )
+  fox_article_global_sentiment: [ -0.342451, "negative"],
+  cnn_article_global_sentiment: [ -0.431977, "negative"],
+  nbc_article_global_sentiment: [ -0,509968, "negative"],
+  fox_article_global_emotions: {
+    "sadness": 0.231073,
+    "joy": 0.547689,
+    "fear": 0.046186,
+    "disgust": 0.12283,
+    "anger": 0.12294
+    },
+  cnn_article_global_emotions: {
+    "sadness": 0.231073,
+    "joy": 0.547689,
+    "fear": 0.046186,
+    "disgust": 0.12283,
+    "anger": 0.12294
+    },
+  nbc_article_global_emotions: {
+    "sadness": 0.231073,
+    "joy": 0.547689,
+    "fear": 0.046186,
+    "disgust": 0.12283,
+    "anger": 0.12294
+    },
+  fox_trump_global_sentiment: [ -0.342451, "negative"],
+  cnn_trump_global_sentiment: [ -0.431977, "negative"],
+  nbc_trump_global_sentiment: [ -0,509968, "negative"],
+  ),
+  fox_trump_global_emotions: {
+    "sadness": 0.231073,
+    "joy": 0.547689,
+    "fear": 0.046186,
+    "disgust": 0.12283,
+    "anger": 0.12294
+    },
+  cnn_trump_global_emotions: {
+    "sadness": 0.231073,
+    "joy": 0.547689,
+    "fear": 0.046186,
+    "disgust": 0.12283,
+    "anger": 0.12294
+    },
+  nbc_trump_global_emotions: {
+    "sadness": 0.231073,
+    "joy": 0.547689,
+    "fear": 0.046186,
+    "disgust": 0.12283,
+    "anger": 0.12294
+    }
 
 p "Done!"
 

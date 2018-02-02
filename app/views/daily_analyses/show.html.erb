@@ -5,4 +5,33 @@
 <div id="page">
   <%= render 'shared/barometer' %>
 </div>
+<div id="pageHr">
+  <i><i>↓</i></i>
+</div>
+<div id="page" style="background-color: rgb(0, 82, 165)">
+  <div id="ajax-tabs">
+    <ul class="nav nav-justified nav-tabs">
+      <li class = "active">
+        <%= link_to "CNN", "#cnn", data:{toggle: "tab"}, class:"active" %>
+      </li>
+      <li>
+        <%= link_to "FOX", "#fox", data:{toggle: "tab"} %>
+      </li>
+      <li>
+        <%= link_to "NBC", "#nbc", data:{toggle: "tab"} %>
+      </li>
+    </ul>
+  </div>
+  <div class="tab-content">
+    <div class="tab-pane active" id="cnn">
+      <%= render 'shared/cnn_daily_analysis' %>
+    </div>
+    <div class="tab-pane" id="fox">
+      <%= render 'shared/fox_daily_analysis' %>
+    </div>
+    <div class="tab-pane" id="nbc">
+      <%= render 'shared/nbc_daily_analysis' %>
+    </div>
+  </div>
+</div>
 

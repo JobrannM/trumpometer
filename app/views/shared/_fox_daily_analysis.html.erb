@@ -1,0 +1,47 @@
+<div class="row">
+  <% @fox_articles.each do |article| %>
+    <div class="col-xs-12 col-sm-4">
+      <% if article.article_sentiment[1] == "positive" %>
+        <div class="card border-green" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url(<%= article.url_image %>); background-size: cover;">
+          <div class="card-title">
+            <h4><%= truncate(article.title, length: 70)%> </h4>
+            <p>by <%= article.author %></p>
+          </div>
+          <% if article.article_sentiment[1] == "positive" %>
+            <div class="card-score positive">
+              <%= number_to_percentage(article.article_sentiment[0].to_f*100, precision: 0) %>
+            </div>
+          <% elsif article.article_sentiment[1] == "negative" %>
+              <div class="card-score negative">
+                <%= number_to_percentage(article.article_sentiment[0].to_f.abs*100, precision: 0) %>
+              </div>
+          <% end %>
+          <div class="card-description">
+            <p><%= truncate(article.description, length: 140) %></p>
+          </div>
+          <%= link_to "", article.url, target: :_blank, class: "card-link" %>
+        </div>
+      <% elsif article.article_sentiment[1] == "negative"  %>
+        <div class="card border-red" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url(<%= article.url_image %>); background-size: cover;">
+          <div class="card-title">
+            <h4><%= truncate(article.title, length: 70)%></h4>
+            <p>by <%= article.author %></p>
+          </div>
+          <% if article.article_sentiment[1] == "positive" %>
+            <div class="card-score positive">
+              <%= number_to_percentage(article.article_sentiment[0].to_f*100, precision: 0) %>
+            </div>
+          <% elsif article.article_sentiment[1] == "negative" %>
+              <div class="card-score negative">
+                <%= number_to_percentage(article.article_sentiment[0].to_f.abs*100, precision: 0) %>
+              </div>
+          <% end %>
+          <div class="card-description">
+            <p><%= truncate(article.description, length: 140) %></p>
+          </div>
+          <%= link_to "", article.url, target: :_blank, class: "card-link" %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
