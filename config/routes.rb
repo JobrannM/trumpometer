@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :daily_analyses, only: [:show]
-
+  get 'team', to: 'pages#team', as: :team
 end
