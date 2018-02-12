@@ -30,6 +30,8 @@ class WatsonApiService
 
   def query_maker(article)
     my_query = {
+      "emotion.document" => "true",
+      "sentiment.document" => "true",
       "entities.type" => "true",
       "entities.emotion" => "true",
       "entities.sentiment" => "true",

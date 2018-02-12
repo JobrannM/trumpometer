@@ -69,7 +69,7 @@ daily_analysis = DailyAnalysis.create!(
     },
   fox_trump_global_sentiment: [ -0.342451, "negative"],
   cnn_trump_global_sentiment: [ -0.431977, "negative"],
-  nbc_trump_global_sentiment: [ -0,509968, "negative"],
+  nbc_trump_global_sentiment: [ -0.509968, "negative"],
   ),
   fox_trump_global_emotions: {
     "sadness": 0.231073,
